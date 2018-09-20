@@ -28,4 +28,19 @@
         }
     }
 
+    &--bottom {
+        display: flex;
+
+        &__left,
+        &__right {
+            flex: 0 0 50%;
+            align-self: stretch;
+        }
+
+        &__left {
+            border-right: 2px dotted $color-grey-light-2;
+            height: auto;
+        }
+    }
+
 }

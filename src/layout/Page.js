@@ -2,6 +2,7 @@ import React from 'react';
 import BoxContainer from '../components/BoxContainer';
 import SectionMiddle from './SectionMiddle';
 import customData from '../testData.json';
+import SectionBottom from './SectionBottom';
 
 export default class Page extends React.Component {
     constructor(props) {
@@ -34,6 +35,7 @@ export default class Page extends React.Component {
                     }
                 </section>
                 <SectionMiddle data={this.state.middle}/>
+                <SectionBottom />
             </main>
         )
     }

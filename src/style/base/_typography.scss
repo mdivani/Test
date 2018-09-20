@@ -7,8 +7,10 @@
 }
 
 .heading-secondary {
-    font-size: $font-size-m;
+    font-size: $font-size-l;
     font-weight: 300;
+    color: $color-black;
+    margin-bottom: $xs-size;
 
     &::first-letter {
         text-transform: uppercase;
@@ -36,6 +38,14 @@
     color: inherit;
     margin-bottom: $s-size;
     @include textOverflow(12);
+}
+
+.text-tertiary {
+    font-size: $font-size-m; 
+    color: $color-grey-dark-2;
+    line-height: 1;
+
+    @include textOverflow(5);
 }
 
 .text-primary--long {

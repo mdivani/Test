@@ -33,10 +33,23 @@ const BoxContainer = (props) => {
             </Box>
         )
     }
-    else if(props.type === 'bottom') {
+    else if(props.type === 'bottom-right') {
         return (
-            <Box className='box--bottom'>
-                
+            <Box className='box--bottom box--bottom--right'>
+                <h1 className='heading-secondary'>lorom ipsum dolor</h1>
+                <p className='text-tertiary'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                </p>
+            </Box>
+        )
+    }
+    else if(props.type === 'bottom-left') {
+        return (
+            <Box className='box--bottom box--bottom--left'>
+                <h1 className='heading-secondary'>lorom ipsum dolor</h1>
+                <p className='text-tertiary'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                </p>
             </Box>
         )
     }
