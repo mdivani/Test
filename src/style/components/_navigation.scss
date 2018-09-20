@@ -1,0 +1,24 @@
+.navigation {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: $s-size;
+
+    &__nav {
+        background-color: $color-grey-light-2;
+        border-radius: 50%;
+        cursor: pointer;
+        width: $xs-size;
+        height: $xs-size;
+        margin-right: 3px;
+    
+        &:hover,
+        &:focus {
+            background-color: $color-secondary;
+        }
+    
+        &--active {
+            background-color: $color-secondary;
+        }
+    }
+}

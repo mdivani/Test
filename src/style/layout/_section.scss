@@ -21,6 +21,8 @@
         }
 
         &__right {
+            background-color: $color-primary;
+            color: $color-secondary;
             flex: 1;
             align-self: stretch;
         }

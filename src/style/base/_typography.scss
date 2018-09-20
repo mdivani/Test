@@ -31,6 +31,13 @@
     @include textOverflow(3);
 }
 
+.text-secondary {
+    font-size: $font-size-xs;
+    color: inherit;
+    margin-bottom: $s-size;
+    @include textOverflow(12);
+}
+
 .text-primary--long {
     @include textOverflow(5);
 }

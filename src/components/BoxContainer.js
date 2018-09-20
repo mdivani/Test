@@ -15,10 +15,21 @@ const BoxContainer = (props) => {
     }
     else if(props.type === 'middle') {
         return (
-            <Box className='box--middle'>
+            <Box className='box--middle-left'>
                 <h1 className='heading-primary'>{props.heading}</h1>
                 {props.subHeading && <h3 className='heading-tertiary'>{props.subHeading}</h3>}
                 <p className='text-primary'>{props.text}</p>
+            </Box>
+        )
+    }
+    else if(props.type === 'middle-right') {
+        return (
+            <Box>
+                <h1 className='heading-primary'>{props.heading}</h1>
+                {props.children}
+                {props.subHeading && <h3 className='heading-tertiary'>{props.subHeading}</h3>}
+                <p className='text-secondary'>{props.text}</p>
+                <button className='btn btn--primary'> button 1 </button>
             </Box>
         )
     }

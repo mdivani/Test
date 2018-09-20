@@ -2,6 +2,34 @@
     border: none;
     overflow: hidden;
     transition: all .1s ease-in;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: $font-size-xs;
+    font-weight: 600;
+
+    &--primary {
+        background-color: $color-grey-light;
+        border-radius: 3px;
+        box-shadow: 0 0 rgba($color-black, .26);
+        cursor: pointer;
+        padding: $xs-size $m-size;
+        transition: all .3s linear;
+
+        &:hover {
+            transform: translateY(-$xs-size);
+            box-shadow: 0 .5rem 3rem rgba($color-black, .26);
+        }
+
+        &:active {
+            outline: none;
+            transform: translateY(-$xs-size/2);
+            box-shadow: 0 .2rem 1rem rgba($color-black, .26);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
 
     &--secondary {
         background-image: linear-gradient(to bottom, $color-grey-light, $color-grey-light-2);
@@ -12,10 +40,6 @@
         padding: $s-size/2;
         margin-bottom: $s-size;
         max-height: $s-size + $font-size-xs;
-        line-height: 1;
-        font-size: $font-size-xs;
-        font-weight: 600;
-        text-transform: uppercase;
 
         &__main {
             display: block;
