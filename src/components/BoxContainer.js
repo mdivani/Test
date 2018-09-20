@@ -16,7 +16,9 @@ const BoxContainer = (props) => {
     else if(props.type === 'middle') {
         return (
             <Box className='box--middle'>
-                
+                <h1 className='heading-primary'>{props.heading}</h1>
+                {props.subHeading && <h3 className='heading-tertiary'>{props.subHeading}</h3>}
+                <p className='text-primary'>{props.text}</p>
             </Box>
         )
     }

@@ -16,13 +16,21 @@
 }
 
 .heading-tertiary {
-    font-size: $font-size-s;
-    font-weight: 500;
+    color: $color-black;
+    font-size: $font-size-xs;
+    font-weight: 600;
+    margin-bottom: $s-size/2;
     text-transform: lowercase;
+    width: 100%;
 }
 
 .text-primary {
     font-size: $font-size-xs;
     color: $color-grey-dark;
-    @include textOverflow;
+    margin-bottom: $s-size;
+    @include textOverflow(3);
+}
+
+.text-primary--long {
+    @include textOverflow(5);
 }

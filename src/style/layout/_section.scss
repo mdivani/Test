@@ -1,18 +1,29 @@
 .section {
+    margin: 0 auto;
+    margin-top: $l-size;
 
     &--top {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-        margin: 0 auto;
     }
 
     &--middle {
+        display: flex;
 
+        &__left {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: $color-black;
+            flex: 3;
+            align-self: stretch;
+        }
+
+        &__right {
+            flex: 1;
+            align-self: stretch;
+        }
     }
 
-    &--bottom {
-
-    }
 }

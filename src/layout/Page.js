@@ -1,18 +1,21 @@
 import React from 'react';
 import BoxContainer from '../components/BoxContainer';
+import SectionMiddle from './SectionMiddle';
 import customData from '../testData.json';
 
 export default class Page extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: null
+            top: null,
+            middle: null
         }
     }
 
     componentDidMount() {
-        const data = customData;
-        this.setState({data});
+        const top = customData.top;
+        const middle = customData.middle;
+        this.setState({top, middle});
     }
 
     render() {
@@ -20,7 +23,7 @@ export default class Page extends React.Component {
             <main className='page'>
                 <section className='section section--top'>
                     {
-                        this.state.data && this.state.data.dataItems.map((value, index) => {
+                        this.state.top && this.state.top.map((value, index) => {
                             return <BoxContainer 
                                       key={index} //ideally I should have an ID
                                       type='top'
@@ -30,6 +33,7 @@ export default class Page extends React.Component {
                         })  
                     }
                 </section>
+                <SectionMiddle data={this.state.middle}/>
             </main>
         )
     }
