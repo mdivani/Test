@@ -25,9 +25,8 @@ const BoxContainer = (props) => {
     else if(props.type === 'middle-right') {
         return (
             <Box>
-                <h1 className='heading-primary'>{props.heading}</h1>
+                <h1 className='heading-sidebar'>{props.heading}</h1>
                 {props.children}
-                {props.subHeading && <h3 className='heading-tertiary'>{props.subHeading}</h3>}
                 <p className='text-secondary'>{props.text}</p>
                 <button className='btn btn--primary'> button 1 </button>
             </Box>

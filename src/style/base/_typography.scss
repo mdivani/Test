@@ -1,14 +1,18 @@
 .heading-primary {
+    box-shadow: 0px 1px 0px $color-secondary;
     font-size: $font-size-l;
     font-weight: 300;
     text-transform: uppercase;
+    line-height: 1.1;
     margin-bottom: $s-size;
     margin-top: $m-size;
 }
 
 .heading-secondary {
+    font-family: 'Raleway', sans-serif;
     font-size: $font-size-l;
     font-weight: 300;
+    line-height: .7;
     color: $color-black;
     margin-bottom: $xs-size;
 
@@ -18,32 +22,43 @@
 }
 
 .heading-tertiary {
-    color: $color-black;
-    font-size: $font-size-xs;
-    font-weight: 600;
+    color: $color-grey-dark-4;
+    font-size: $font-size-s;
+    font-weight: bold;
+    line-height: 1.25;
     margin-bottom: $s-size/2;
     text-transform: lowercase;
     width: 100%;
 }
 
+.heading-sidebar {
+    font-size: $font-size-xl;
+    line-height: .9;
+    margin: $m-size auto;
+    text-align: left;
+    text-transform: uppercase;
+}
+
 .text-primary {
-    font-size: $font-size-xs;
-    color: $color-grey-dark;
+    font-size: $font-size-s;
+    line-height: 1.5;
+    color: $color-grey-dark-4;
     margin-bottom: $s-size;
     @include textOverflow(3);
 }
 
 .text-secondary {
-    font-size: $font-size-xs;
+    font-size: $font-size-s;
     color: inherit;
     margin-bottom: $s-size;
     @include textOverflow(12);
 }
 
 .text-tertiary {
+    font-family: 'Lato', sans-serif;
     font-size: $font-size-m; 
     color: $color-grey-dark-2;
-    line-height: 1;
+    line-height: 1.15;
 
     @include textOverflow(5);
 }

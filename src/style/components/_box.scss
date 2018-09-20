@@ -43,7 +43,7 @@
         border-top: 1px solid $color-primary;
         flex: 0 0 33.3333%;
         background-color: $color-secondary;
-        color: $color-grey-dark-2;
+        color: $color-grey-dark-3;
         text-align: left;
 
         &::after {
@@ -95,8 +95,7 @@
         display: block;
         border-radius: $xs-size;
         background-color: $color-secondary;
-        box-shadow: 0 0 .1rem rgba($color-black, .26);
-        border: 1px solid rgba($color-black, .26);
+        border: 2px solid $color-grey-light;
         color: $color-grey-dark-2;
         padding: $s-size;
         position: relative;
@@ -105,7 +104,7 @@
 
         &::after {
             content: '';
-            background-color: $color-grey-light-2;
+            background-color: $color-grey-light;
             width: $s-size/2;
             height: $s-size/2;
             position: absolute;
@@ -117,10 +116,11 @@
             position: absolute;
             border-radius: 50%;
             background-color: $color-secondary;
-            border: 1px solid rgba($color-black, .26);
+            border: 2px solid $color-grey-light;
+            font-family: 'Raleway', sans-serif;
             line-height: 1;
-            height: $s-size * 2 + $font-size-l;
-            width: $s-size * 2 + $font-size-l;
+            height: $medium-size;
+            width: $medium-size;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -158,6 +158,7 @@
             &::before {
                 content: "1998";
                 left: -($l-size * 1.5); 
+                letter-spacing: -1px;
                 transform: translate(-50%, -50%);
             }
         }

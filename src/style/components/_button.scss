@@ -5,12 +5,13 @@
     text-transform: uppercase;
     line-height: 1;
     font-size: $font-size-xs;
-    font-weight: 600;
+    font-weight: bold;
 
     &--primary {
         background-color: $color-grey-light;
         border-radius: 3px;
-        box-shadow: 0 0 rgba($color-black, .26);
+        box-shadow: 0px 1px 0px #b30000;
+        color: $color-btn;
         cursor: pointer;
         padding: $xs-size $m-size;
         transition: all .3s linear;
