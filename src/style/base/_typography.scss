@@ -1,0 +1,28 @@
+.heading-primary {
+    font-size: $font-size-l;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: $s-size;
+    margin-top: $m-size;
+}
+
+.heading-secondary {
+    font-size: $font-size-m;
+    font-weight: 300;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+.heading-tertiary {
+    font-size: $font-size-s;
+    font-weight: 500;
+    text-transform: lowercase;
+}
+
+.text-primary {
+    font-size: $font-size-xs;
+    color: $color-grey-dark;
+    @include textOverflow;
+}

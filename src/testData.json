@@ -1,0 +1,20 @@
+{
+    "dataItems": [
+        {
+            "heading": "AAA AAAA AAA",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mollis sem sed erat vulputate venenatis. Vivamus nec venenatis purus, eu molestie lacus. Nam faucibus auctor condimentum. Donec fringilla et eros sit amet congue. Praesent a ipsum id odio varius viverra quis vel eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae"
+        },
+        {
+            "heading": "BBB bbb bbbb",
+            "text": "Aliquam gravida leo urna. Donec a diam nulla. Donec eu risus placerat, ornare neque fermentum, eleifend nulla. Nulla lacinia, quam vitae viverra pharetra, tellus quam venenatis orci, condimentum scelerisque mi quam vitae odio. Mauris tempor massa quis quam faucibus ultrices."
+        },
+        {
+            "heading": "ccc ccc cccc",
+            "text": "Quisque non tincidunt nibh, ut dignissim orci. Cras eget lorem eget risus ultrices laoreet. In rutrum nibh maximus felis pretium, ut vehicula felis porttitor. Curabitur eget sem tempor, cursus lorem a, venenatis ipsum. Aenean auctor nisl ut feugiat pulvinar. Vestibulum erat ante, elementum at tempus at, venenatis id velit."
+        },
+        {
+            "heading": "eee eeee eeee",
+            "text": "Praesent non est egestas sapien varius malesuada. Donec efficitur neque imperdiet posuere semper. Suspendisse venenatis vehicula libero eu commodo. Praesent non sem nunc. Donec iaculis scelerisque neque, eu tristique augue consequat non. In elementum mauris enim, a efficitur tortor volutpat sit amet."
+        }
+    ]
+}
