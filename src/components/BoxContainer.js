@@ -9,7 +9,7 @@ const BoxContainer = (props) => {
             <Box className='box--top'>
                 <h1 className='heading-primary'>{props.heading}</h1>
                 <p className='text-primary'>{props.text}</p>
-                <Button />
+                <Button className='btn--secondary' value='button 2' hover='button 2 hover' />
             </Box>
         )
     }
@@ -24,20 +24,20 @@ const BoxContainer = (props) => {
     }
     else if(props.type === 'middle-right') {
         return (
-            <Box>
+            <Box className='box--middle-right'>
                 <h1 className='heading-sidebar'>{props.heading}</h1>
                 {props.children}
                 <p className='text-secondary'>{props.text}</p>
-                <button className='btn btn--primary'> button 1 </button>
+                <Button className='btn--primary' value='button 1' hover='meet our works' />
             </Box>
         )
     }
     else if(props.type === 'bottom-right') {
         return (
             <Box className='box--bottom box--bottom--right'>
-                <h1 className='heading-secondary'>lorom ipsum dolor</h1>
+                <h1 className='heading-secondary'>{props.heading}</h1>
                 <p className='text-tertiary'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                {props.text}
                 </p>
             </Box>
         )
@@ -45,9 +45,9 @@ const BoxContainer = (props) => {
     else if(props.type === 'bottom-left') {
         return (
             <Box className='box--bottom box--bottom--left'>
-                <h1 className='heading-secondary'>lorom ipsum dolor</h1>
+                <h1 className='heading-secondary'>{props.heading}</h1>
                 <p className='text-tertiary'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                 {props.text}
                 </p>
             </Box>
         )

@@ -8,15 +8,19 @@
 
     &--top {
         background-color: $color-secondary;
-        border-top: 2px solid $color-primary;
+        border-top: .2rem solid $color-primary;
         color: $color-grey-dark-2;
-        flex: 0 1 25%;
+        flex: 0 0 25%;
         align-self: stretch;
         text-align: center;
-        justify-content: flex-start;
+        justify-content: space-between;
 
         &:not(:last-child) {
-            margin-right: 4px;
+            margin-right: .4rem;
+
+            @include respond(tab-land) {
+                margin-right: 0;
+            }
         }
 
         &::before {
@@ -36,6 +40,41 @@
             transform: scale(1.15);
             color: $color-primary;
             z-index: 1;
+
+            @include respond(phone-port) {
+                transform: scale(1.05);
+            }
+        }
+
+        @include respond(tab-land) {
+            flex: 0 0 48%;
+            margin-bottom: .4rem;
+
+            &:nth-child(odd) {
+                margin-right: .4rem;
+            }
+
+            &:nth-last-child(2),
+            &:nth-last-child(1) {
+                &::before {
+                    display: none;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        @include respond(phone-port) {
+            flex: 0 0 100%;
+
+            &:nth-child(odd) {
+                margin-right: 0;
+            }
+
+            &:not(:first-child) {
+                &::before {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -45,6 +84,23 @@
         background-color: $color-secondary;
         color: $color-grey-dark-3;
         text-align: left;
+
+        @include respond(phone-land) { 
+            flex: 0 0 66.6667%;
+            border: none;
+            border-right: 1px solid $color-primary;
+        }
+
+        @include respond(phone-port) {
+            flex: 0 0 100%;
+            border: none;
+            border-top: 2px solid $color-primary;
+            margin-top: 4px;
+
+            &::after {
+                display: none;
+            }
+        }
 
         &::after {
             content: '';
@@ -57,6 +113,14 @@
             top: 0;
             left: 50%;
             transform: translate(-50%, -50%) rotate(45deg);
+
+            @include respond(phone-land) { 
+                left: 100%;
+                top: 50%;
+                border: none;
+                border-top: 1px solid $color-primary;
+                border-right: 1px solid $color-primary;
+            }
         }
 
         &:first-child {
@@ -64,11 +128,31 @@
             border: none;
             border-right: 1px solid $color-primary;
 
+            @include respond(phone-land) { 
+                border-right: none;
+                border-left: 1px solid $color-primary;
+            }
+
+            @include respond(phone-port) {
+                border: none;
+                border-top: 2px solid $color-primary;
+                margin: 0;
+                margin-top: 4px;
+            }
+
             &::after {
                 left: 100%;
                 top: 50%;
                 border-left: none;
                 border-right: 1px solid $color-primary;
+
+                @include respond(phone-land) {
+                    left: 0;
+                    top: 50%;
+                    border: none;
+                    border-left: 1px solid $color-primary;
+                    border-bottom: 1px solid $color-primary;
+                }
             }
 
             & > p {
@@ -81,26 +165,36 @@
             border: none;
             border-left: 1px solid $color-primary;
 
+            @include respond(phone-port) {
+                border: none;
+                border-top: 2px solid $color-primary;
+            }
+
             &::after {
                 left: 0;
                 top: 50%;
+                border: none;
                 border-left: 1px solid $color-primary;
                 border-bottom: 1px solid $color-primary;
-                border-top: none;
             }
         }
+    }
+
+    &--middle-right {
+        text-align: left;
     }
 
     &--bottom {
         display: block;
         border-radius: $xs-size;
         background-color: $color-secondary;
-        border: 2px solid $color-grey-light;
+        border: .2rem solid $color-grey-light;
         color: $color-grey-dark-2;
         padding: $s-size;
         position: relative;
         width: 80%;
-        margin: $l-size auto;
+        margin: $xs-size auto;
+        margin-bottom: $l-size;
 
         &::after {
             content: '';
@@ -131,36 +225,89 @@
         }
 
         &--left {
-            margin-top: 16em;
-            margin-right: $l-size * 1.5;
+            margin-top: $top-large-size;
+            margin-right: $medium-size;
             text-align: right;
+
+            @include respond(desk-small) {
+                margin-right: $l-size;
+            }
 
             &::after {
                 left: 100%;
                 transform: translate(-50%, -50%) rotate(45deg);
+
+                @include respond(phone-port) {
+                    top: 0;
+                    left: 50%;
+                }
             } 
 
             &::before {
                 content: "2000";
-                right: -($l-size * 1.5); 
+                right: -($medium-size + .2rem); 
                 transform: translate(50%, -50%);
+
+                @include respond(desk-small) {
+                    right: -($l-size + .2rem);
+                }
+
+                @include respond(phone-port) {
+                    top: -$l-size;
+                    right: 50%;
+                }
+            }
+
+            @include respond(tab-land) {
+                margin-top: $m-size;
+            }
+
+            @include respond(phone-port) {
+                margin: $l-size auto;
+                text-align: left;
             }
         }
 
         &--right {
-            margin-left: $l-size * 1.5;
+            margin-left: $medium-size;
+
+            @include respond(desk-small) {
+                margin-left: $l-size;
+            }
 
             &::after {
                 right: 100%;
                 transform: translate(50%, -50%) rotate(45deg);
+
+                @include respond(phone-port) {
+                    top: 0;
+                    right: 50%;
+                }
             } 
 
             &::before {
                 content: "1998";
-                left: -($l-size * 1.5); 
+                left: -($medium-size + .2rem); 
                 letter-spacing: -1px;
                 transform: translate(-50%, -50%);
+
+                @include respond(desk-small) {
+                    left: -($l-size + .2rem);
+                }
+
+                @include respond(phone-port) {
+                    top: -$l-size;
+                    left: 50%;
+                }
             }
+
+            @include respond(phone-port) {
+                margin: $l-size auto;
+            }
+        }
+
+        @include respond(phone-port) {
+            width: 100%;
         }
 
     }

@@ -1,41 +1,32 @@
 import React from 'react';
-import BoxContainer from '../components/BoxContainer';
+import SectionBottom from './SectionBottom';
+import SectionTop from './SectionTop';
 import SectionMiddle from './SectionMiddle';
 import customData from '../testData.json';
-import SectionBottom from './SectionBottom';
 
 export default class Page extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            top: null,
-            middle: null
+            top: [],
+            middle: [],
+            bottom: {}
         }
     }
 
     componentDidMount() {
         const top = customData.top;
         const middle = customData.middle;
-        this.setState({top, middle});
+        const bottom = customData.bottom;
+        this.setState({top, middle, bottom});
     }
 
     render() {
         return (
             <main className='page'>
-                <section className='section section--top'>
-                    {
-                        this.state.top && this.state.top.map((value, index) => {
-                            return <BoxContainer 
-                                      key={index} //ideally I should have an ID
-                                      type='top'
-                                      heading={value.heading}
-                                      text={value.text}
-                                    />
-                        })  
-                    }
-                </section>
+                <SectionTop data={this.state.top} />
                 <SectionMiddle data={this.state.middle}/>
-                <SectionBottom />
+                <SectionBottom data={this.state.bottom}/>
             </main>
         )
     }

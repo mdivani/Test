@@ -8,27 +8,31 @@
     font-weight: bold;
 
     &--primary {
-        background-color: $color-grey-light;
+        display: block;
+        background-color: $color-secondary;
         border-radius: 3px;
-        box-shadow: 0px 1px 0px #b30000;
+        box-shadow: 0px -1px 0px $color-secondary;
         color: $color-btn;
         cursor: pointer;
-        padding: $xs-size $m-size;
-        transition: all .3s linear;
+        font-size: $font-size-s;
+        height: $m-size;
+        line-height: 1.4;
+        width: $btn-width;
+        padding: $xs-size;
+        transition: all .3s ease-in;
+        margin-right: auto;
+        margin-bottom: $s-size;
 
         &:hover {
-            transform: translateY(-$xs-size);
-            box-shadow: 0 .5rem 3rem rgba($color-black, .26);
+            background-image: linear-gradient(to bottom, $color-grey-light-2 10%, $color-secondary);
+            box-shadow: 0px -1px 0px #cdcdcd;
         }
 
-        &:active {
-            outline: none;
-            transform: translateY(-$xs-size/2);
-            box-shadow: 0 .2rem 1rem rgba($color-black, .26);
-        }
-
+        &:active,
         &:focus {
             outline: none;
+            background-image: linear-gradient(to bottom, $color-secondary 10%, $color-grey-light-2);
+            box-shadow: 0px -1px 0px #cdcdcd;
         }
     }
 
@@ -42,37 +46,42 @@
         margin-bottom: $s-size;
         max-height: $s-size + $font-size-xs;
 
-        &__main {
-            display: block;
-            text-align: center;
-            transition: all .3s linear;
-        }
-
-        &__hover {
-            display: block;
-            transform: translateY($l-size);
-            opacity: 0;
-            visibility: hidden;
-            transition: all .3s linear;
-        }
-
         &:hover {
             background-image: none;
             background-color: $color-primary;
             color: $color-secondary;
             padding: $s-size/2;
         }
+    }
 
-        &:hover &__main {
-            transform: translateY(-$l-size);
-            opacity: 0;
-            visibility: hidden;
-        }
+    &__main,
+    &__hover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-        &:hover &__hover {
-            transform: translateY(-100%);
-            opacity: 1;
-            visibility: visible;
-        }
+
+    &__main {
+        transition: all .3s linear;
+    }
+
+    &__hover {
+        transform: translateY($l-size);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s linear;
+    }
+
+    &:hover &__main {
+        transform: translateY(-$l-size);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &:hover &__hover {
+        transform: translateY(-100%);
+        opacity: 1;
+        visibility: visible;
     }
 }
